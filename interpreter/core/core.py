@@ -160,3 +160,17 @@ class Interpreter:
         return generate_system_message(self)
     def get_relevant_procedures_string(self):
         return get_relevant_procedures_string(self)
+
+
+# assuming there is a function user_interaction which manages the direct user interactions
+
+def user_interaction(user_id: str, interaction: str):
+    from UserProfile import UserProfile
+
+    user_profile = UserProfile(user_id) # create a user profile for this user_id
+    user_profile.update_history(interaction) # Update history after each interaction
+
+# user_specific_phrases and preferences are updated elsewhere as they require other inputs
+
+# this is just a mock, actual code modification will depend on the structure of the existing code
+
